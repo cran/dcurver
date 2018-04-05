@@ -1,0 +1,16 @@
+cdaabce219b09695f30eb015587d7520 *DESCRIPTION
+09a3c901ae7f1ea9ce195e8f42e9072c *NAMESPACE
+38e05eae410b1649157700e7ae831769 *R/RcppExports.R
+d8aa34fb68c5e43c27c97dd52dd698bf *README.md
+d81d5e053dc4a38724f3cf4accbd5d9a *man/dc_grad.Rd
+38a773c79d480d7710c6fd6b37281d76 *man/ddc.Rd
+21e5cb2446a37ecb30f3223ac9cebbbe *man/rdc.Rd
+661f394ccbe8c6b76109df1fa806b490 *src/Makevars
+661f394ccbe8c6b76109df1fa806b490 *src/Makevars.win
+966896227a32fc604fe16ad583a23fd1 *src/RcppExports.cpp
+4a8151e6e8ec04711abf6377521bb19f *src/dcUtils.cpp
+8a44b202272410d3028976c577e6b625 *src/dcUtils.h
+0aad8f8f3013daa85360cdf66fb7e4db *src/distFuncs.cpp
+1c89df43d1a14ab61754261b6acdd687 *src/estFuncs.cpp
+fe1b5627c5e91bedf1f41b5a7c1741c0 *tests/testthat.R
+6710f1997888080dcd5728dff22302cf *tests/testthat/test_inputs.R
