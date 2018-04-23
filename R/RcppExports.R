@@ -7,7 +7,7 @@
 #'
 #' @param x vector of quantiles.
 #' @param phi Davidian curve parameters.
-#' A maximum of 10 parameters is allowed, all of which should be between -90 < phi <= 90.
+#' A maximum of 10 parameters is allowed.
 #' 
 #' @examples
 #' curve(ddc(x, 1.570789), -6, 6) # Approximately normal.
@@ -25,7 +25,7 @@ ddc <- function(x, phi) {
 #'
 #' @param n Number of observations to be sampled.
 #' @param phi Davidian curve parameters.
-#' A maximum of 10 parameters is allowed, all of which should be between -90 < phi <= 90.
+#' A maximum of 10 parameters is allowed.
 #' 
 #' @examples
 #' # Sample from the standard normal Davidian curve:
@@ -48,7 +48,12 @@ rdc <- function(n, phi) {
 #'
 #' @param x A vector of observations.
 #' @param phi phi Davidian curve parameters.
-#' A maximum of 10 parameters is allowed, all of which should be between -90 < phi <= 90.
+#' A maximum of 10 parameters is allowed.
+#' 
+#' @details Woods & Lin (2009) provide the gradient (Equations 17 and 18). Note that the gradient is not defined for phi = 0.0.
+#' 
+#' @references Woods, C. M., & Lin, N. (2009). Item response theory with estimation of the latent density using Davidian curves.
+#' \emph{Applied Psychological Measurement, 33}(2), 102-117. \doi{10.1177/0146621608319512}
 #' 
 #' @examples
 #' # The loglikelihood of a univariate Davidian curve is given by,
@@ -64,10 +69,13 @@ rdc <- function(n, phi) {
 #' # This can be verified by numerical approximation.
 #' # For instance, using numDeriv package:
 #' \dontrun{
-#' phi <- c(-10, 0, 10)
+#' phi <- c(-5, 2.5, 10)
 #' d <- runif(10, -5, 5)
 #' dc_LL_GR(phi, d)
 #' numDeriv::grad(dc_LL, x = phi, dat = d)
+#' 
+#' phi <- c(-5, 0, 10)
+#' dc_LL_GR(phi, d)
 #' }
 #' 
 dc_grad <- function(x, phi) {
